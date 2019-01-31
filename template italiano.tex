@@ -1,0 +1,120 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[italian]{babel}
+\usepackage{soul}
+\usepackage{mathtools}
+\usepackage{amssymb,amsmath,amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{gensymb}
+\usepackage{units}
+\usepackage{hhline}
+\usepackage{color}
+\usepackage[export]{adjustbox}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[super,comma]{natbib}
+\usepackage{titling}
+\usepackage{datetime}
+
+%\renewcommand{\today}{\thisdayofweekname\ \theday\ \monthname\ \the\year}
+
+\geometry{a4paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+\definecolor{pantone294}{cmyk}{1,0.6,0,0.2}
+
+\title{XXX NOME DELL'ESPERIMENTO XXX}
+\author{XXX NOMI STUDENTI XXX}
+\date{\today}
+
+\pagestyle{fancy}
+\lfoot{Università di Pisa}
+\rfoot{xxx nome esperimento xxx} 
+
+\begin{document}
+	\newgeometry{left=14mm, right=13.5mm, top=13.5mm, bottom=30mm}
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\begin{figure}
+			\includegraphics[width=31.5mm,right]{./Cherubino}
+		\end{figure}
+		\vspace*{-43mm}\hspace{-6mm}\textbf{\textcolor{pantone294}{\large{Dipartimento di Fisica}}}\\\\\\\\\\
+		
+		\vspace{30mm}
+		\begin{center}
+			\textcolor{pantone294}{\huge{Laboratorio II}}\\\vspace*{7mm}
+			\textcolor{pantone294}{\huge{\textbf{\thetitle}}}\\\vspace*{10mm}
+			\textcolor{pantone294}{\theauthor}\\\vspace*{10mm}
+			\textcolor{pantone294}{\thedate}\\\vspace*{20mm}
+			\begin{tabular}{ll}
+				\textbf{Studenti:} & xxx nome xxx (xxx numero di matricola xxx) \\
+				& xxx mail xxx\\ \\
+				& xxx nome xxx (xxx numero di matricola xxx) \\
+				& xxx email xxx \\ \\
+				\textbf{Professore:} & Francesco Fuso \\ \\
+				
+			\end{tabular}
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	\restoregeometry
+	\newpage
+	
+	\tableofcontents
+	
+	\vspace{2cm}
+	\section{Abstract}
+	%qui fai una descrizione breve e coincisa dell'esperimento, ci metti le nozioni base di fisica e ci scrivi i risultati più importanti ottenuti
+	\newpage
+	
+	
+	
+	% i prossimi capitoli sono come di solito organizzo una relazione io. te la puoi organizzare anche diversamente, se vuoi.
+	\section{Descrizione dell'esperimento}
+% qua descrivi gli strumenti di misura e come hai preso i dati. ricavati le formule che usi in questa sezione. non mette i numeri, vengono dopo
+	\section{Analisi dei dati}
+%qua ti calcoli cosa ti devi calcolare. alla fine di questa sezione ti trovi il risultato e la sua insicurezza. è in questa sezione che ci metti grafici, regressioni, teorema di gauss per il calcolo dell'errore etc.
+%consiglio: metti i dati nelle tabelle alla fine e quando ti riferisci a determinati dati scrivi: utilizzando i dati in Tabella 1...        è più elegante.
+	\section{Commenti conclusivi}
+%qua ci scrivi se i risultati del tuo esperimento coincidono con i valori dei tuoi riferimenti bibliografici. quando lo paragoni a qualcosa mettici sempre la fonte, tipo il libro (autore: titolo, editore, luogo, anno) o il sito (mettici ora e data di quando lo controlli con una nota a piè di pagina) esempio:
+	%in più in questa sezione ci devi scrivere cosa ti può essere andato male, tipo quali sono le cause per cui non ottieni i risultati previsti. 
+	
+	
+	\section{Allegati}
+		\subsection{Dati misurati}
+%qua a noi ci fanno mettere lo scan dei dati che abbiamo scritto in laboratorio, in ogni caso, è l'algoritmo per mettere pdf, jpeg, png etc.
+			%\begin{figure}[H]
+			%	\centering
+			%	\includegraphics[width=13cm]{measured_data.pdf}
+			%	\caption{Seite 1 der Messwerte}
+			%\end{figure}
+		%\subsection{Abbildungen}
+\subsection{Tabelle}
+%ti ce ne metto una per farti un esempio, poi magari scrivimi se la vuoi cambiare
+\begin{table}[ht] \centering \caption {\bf Längenänderung}	
+\begin{tabular}{c|c|c|c|}
+Masse in $g$ & 1. gemesste Länge in $mm$ & 2. gemesste Länge in $mm$ & Mittlwert $\overline l$ in $mm$ \\ \hline
+0 & 10,36 & 10,37 & 10,365\\
+50 & 10,50 & 10,51 & 10,505\\
+100 & 10,63 & 10,65 & 10,640\\
+200 & 10,89 & 10,915 & 10, 9025\\
+300 & 11,14 & 11,17 & 10,155\\
+400 & 11,40 & 11,42 & 10,41\\
+500 & 11,62 & 11,64 & 11,63\\
+600 & 11,85 & 11,88 & 11,865\\
+700 & 12,10 & 12,11 & 12,105\\
+800 & 12,34 & 12,35 & 12,345
+\end{tabular}
+\end{table}
+	
+
+%last but not least la bibliografia
+	\begin{thebibliography}{1}
+		%\bibitem{label}AUTORE, \textit{titolo}, editore, luogo, anno
+		\bibitem{PraktikumsScriptMechanik}Dr. Uwe Müller: \textit{Physikalisches Grundpraktikum: Mechanik und Thermodynamik}, Berlin, 2012
+		\bibitem{PraktikumsScript}Dr. Uwe Müller: \textit{Physikalisches Grundpraktikum: Einführung in die Messung, Auswertung und Darstellung experimenteller Ergebnisse in der Physik}, Berlin, 2007
+	\end{thebibliography}
+\end{document}
